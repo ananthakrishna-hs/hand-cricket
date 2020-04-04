@@ -1,0 +1,15 @@
+header {
+  background-color: blueviolet;
+}
+
+header h1 {
+  margin: 0;
+  padding: 25px;
+  font-family: Courier, monospace;
+}
+
+header h1 small {
+  font-weight: 400;
+  font-size: 18px;
+  font-style: italic;
+}

@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Header, Footer, Home, ImageContext } from './components';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [currentScreen] = useContext(ImageContext).screen;
+  const [url] = useContext(ImageContext).img;
   return (
-    <div>Hello</div>
+    <React.Fragment>
+      <Header></Header>
+      {
+        currentScreen === 'home' && (
+          <Home />
+        )
+      }
+      {
+        currentScreen === 'game' && (
+        <div>{url}</div>
+        )
+      }
+      <Footer></Footer>
+    </React.Fragment>
   );
 }
 

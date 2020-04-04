@@ -1,0 +1,37 @@
+main {
+  width: 85%;
+  margin: 15px auto;
+  color: blueviolet;
+}
+
+main .rules-list {
+  list-style-image: url('../../assets/ball.png');
+}
+
+main .rules-list li {
+  margin-top: 20px;
+}
+
+main .avatar-upload  input{
+  margin-top: 20px;
+}
+
+main .error {
+  color: red;
+}
+
+main .avatar-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+main button {
+  margin-top: 25px;
+  width: 25%;
+  background-color: blueviolet;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 10px;
+}
+
