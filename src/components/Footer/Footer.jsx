@@ -1,6 +1,10 @@
 import React from 'react';
 import './Footer.css';
 
+/**
+ * @Component The footer of application
+ * @description Contains attributions to icons used
+ */
 const Footer = () => {
   return (
     <footer>

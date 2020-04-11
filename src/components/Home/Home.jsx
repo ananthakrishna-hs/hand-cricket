@@ -2,11 +2,20 @@ import React, { useState, useContext } from 'react';
 import 'components/Home/Home.css';
 import { ImageContext } from 'components';
 
+/**
+ * @component The home screen of application
+ * @description Contains input for avatar upload, which can be skipped and stores in context
+ */
 const Home = () => {
   const [errorUpload, setError] = useState(false);
   const [url, setUrl] = useContext(ImageContext).img;
   const [setScreen] = useContext(ImageContext).screen.slice(-1);
 
+  /**
+   * @function To handle image upload by user
+   * @param {event} e The upload event
+   * @description Checks whether the uploaded file is image and stores in context
+   */
   const handleImageUpload = e => {
     e.preventDefault();
     if (e.target.files[0].type.includes('image')) {
@@ -22,9 +31,13 @@ const Home = () => {
     }
   }
 
-  const startGame = e => {
+  /**
+   * @function To start the game
+   */
+  const startGame = () => {
     setScreen('TOSS')
   }
+  
   return (
     <main>
       <h3>

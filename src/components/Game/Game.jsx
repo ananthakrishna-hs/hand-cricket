@@ -6,6 +6,10 @@ import computer from 'assets/laptop.png';
 import user from 'assets/user.png';
 import 'components/Game/Game.css';
 
+/**
+ * @component The game component
+ * @description Contains core of the game. Uses random number generation for score of computer.
+ */
 const Game = () => {
   const [batFirst, setBatFirst] = useContext(ImageContext).batting;
   const [currentBatting, setBatting] = useState(batFirst);
@@ -21,6 +25,11 @@ const Game = () => {
   const [compScore, setCompScore] = useState(0);
   const [setScreen] = useContext(ImageContext).screen.slice(-1);
 
+  /**
+   * @function To handle scoring on click
+   * @param {number} run Run clicked by user
+   * @description Uses setTimeout to wait for avatars to stop bouncing and process score later
+   */
   const score = run => {
     disableButton(true);
     setAnime(true);
@@ -31,6 +40,11 @@ const Game = () => {
     }, 3000);
   }
 
+  /**
+   * @function To process the score based on randomly generated computer score
+   * @param {number} run Run clicked by user
+   * @description Compares randomly generated computer scores and processes the data based on state
+   */
   const processScore = run => {
     const compOutcome = Math.floor(Math.random() * 6) + 1;
     setUserOutcome(run);

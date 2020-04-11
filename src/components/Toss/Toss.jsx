@@ -3,6 +3,10 @@ import { ImageContext } from 'components';
 import 'components/Toss/Toss.css';
 import coin from 'assets/coin.png';
 
+/**
+ * @component The view for toss scenario
+ * @description Uses random number generation to compute toss called by user. Always assumes computer has the coin 
+ */
 const Toss = () => {
   const [toss, setToss] = useState('');
   const [spinner, startSpin] = useState(false);
@@ -12,6 +16,11 @@ const Toss = () => {
   const [batFirst, setBatFirst] = useContext(ImageContext).batting;
   const [setScreen] = useContext(ImageContext).screen.slice(-1);
 
+  /**
+   * @function To toss the coin and process the outcome
+   * @param {string} o The outcome selected by user
+   * @description Uses setTimeout to wait for coin to spin and randomly selects an outcome
+   */
   const spinCoin = o => {
     startSpin(true);
     setTimeout(() => {
@@ -27,6 +36,10 @@ const Toss = () => {
     }, 3000);
   }
 
+  /**
+   * @function To set the innings of the game in context
+   * @param {string} inning The inning selected by user or randomly selected by computer 
+   */
   const setInnings = (inning) => {
     if (inning === 'Bat') {
       setBatFirst('USER');
@@ -35,6 +48,9 @@ const Toss = () => {
     }
   }
 
+  /**
+   * @function To start the game
+   */
   const play = () => {
     setScreen('GAME');
   }

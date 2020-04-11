@@ -1,6 +1,9 @@
 import React from 'react';
 import './Header.css';
 
+/**
+ * @Component The header of application
+ */
 const Header = () => {
   return (
     <header>
