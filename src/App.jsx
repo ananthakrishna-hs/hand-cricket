@@ -7,7 +7,7 @@ import './App.css';
  * @description Component displays the content based on user interactions stored in context
  */
 const App = () => {
-  const [currentScreen] = useContext(ImageContext).screen[0];
+  const [currentScreen] = useContext(ImageContext).screen.slice(0);
   return (
     <React.Fragment>
       <Header></Header>
