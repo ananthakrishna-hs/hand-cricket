@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { ImageContextProvider } from './components';
-import * as serviceWorker from './serviceWorker';
+import 'index.css';
+import App from 'App.jsx';
+import { ImageContextProvider } from 'components';
+import * as serviceWorker from 'serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>

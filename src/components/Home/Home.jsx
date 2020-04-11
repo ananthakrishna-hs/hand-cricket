@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import './Home.css';
-import { ImageContext } from '..';
+import 'components/Home/Home.css';
+import { ImageContext } from 'components';
 
 const Home = () => {
   const [errorUpload, setError] = useState(false);
@@ -23,7 +23,7 @@ const Home = () => {
   }
 
   const startGame = e => {
-    setScreen('game')
+    setScreen('TOSS')
   }
   return (
     <main>

@@ -21,14 +21,15 @@ main .error {
 }
 
 main .avatar-img {
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
+  border: 1px solid blueviolet;
   border-radius: 100%;
 }
 
 main button {
   margin-top: 25px;
-  width: 25%;
+  width: auto;
   background-color: blueviolet;
   border: 1px solid yellow;
   border-radius: 5px;

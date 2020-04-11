@@ -1,21 +1,25 @@
 import React, { useContext } from 'react';
-import { Header, Footer, Home, ImageContext } from './components';
+import { Header, Footer, Home, Game, Toss, ImageContext } from 'components';
 import './App.css';
 
 const App = () => {
   const [currentScreen] = useContext(ImageContext).screen;
-  const [url] = useContext(ImageContext).img;
   return (
     <React.Fragment>
       <Header></Header>
       {
-        currentScreen === 'home' && (
+        currentScreen === 'HOME' && (
           <Home />
         )
       }
       {
-        currentScreen === 'game' && (
-        <div>{url}</div>
+        currentScreen === 'TOSS' && (
+          <Toss />
+        )
+      }
+      {
+        currentScreen === 'GAME' && (
+          <Game />
         )
       }
       <Footer></Footer>
