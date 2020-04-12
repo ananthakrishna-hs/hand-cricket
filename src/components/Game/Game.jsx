@@ -93,7 +93,7 @@ const Game = () => {
         }
       } else {
         if (compOutcome !== run) {
-          if (compScore + run >= userScore + 1) {
+          if (compScore + compOutcome >= userScore + 1) {
             setRun('You lost the game!');
             setInning('GAME OVER');
             disableButton(true);
